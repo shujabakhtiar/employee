@@ -49,7 +49,7 @@ function App() {
       
       </header>
       <div className='body'>
-        <div className='profilePic'>
+        <div className='pp-container'>
         <img src={profilePic} className='profilePic'/>
         </div>
         <div className='name'>{name}</div>

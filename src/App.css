@@ -24,6 +24,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body{
+  background-color: #282c34;
+
+}
 .sidebar-options{
   color:blue;
 }
@@ -42,23 +46,29 @@
   color:white;
 }
 .profilePic{
-  position: fixed;
-  left: 500px;
-  top: 380px;
   background-color: #61dafb;
   width: 200px;
   height: 200px;
-  border: red;
+  border: white;
+
+}
+.pp-container{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -130px;
+  left: 40px;
+  border: 2px solid white; /* This creates a white border around the image */
 }
 .name{
-  position: fixed;
-  left: 800px;
-  top: 380px;
+  position: absolute;
+  top: -130px;
+  left: 350px;
   font-size: 50px;
   border: red;
 }
 .sidebar{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 450px;
@@ -79,7 +89,7 @@ cursor: pointer;
   background-color: gray;
 }
 .god-logo{
-
+width: 300px;
 }
 .header{
   display: flex;
@@ -116,6 +126,7 @@ cursor: pointer;
 .body{
 color:white;
 margin-left: 450px;
+position: relative;
 }
 .propic{
  
