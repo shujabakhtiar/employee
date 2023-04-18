@@ -9,19 +9,21 @@ import riz from "./assets/_images/Profile pics/Carlo Rizzi.jpg"
 import godlogo from "./assets/_logo/the-godfather.svg"
 import luci from "./assets/_images/Profile pics/Luci Mancini.jpg"
 function App() {
-  const [data, setData] = useState(null);
   const [profilePic, setprofilePic]=useState(Vito);
   const [name,setName]=useState('Vito Corleone');
   const [range,setRange]=useState(0);
   const [bioData, setBioData]=useState("");
+  const [textSize,setTextSize]=useState(200);
+  const [emp,setEmp]=useState([]);
   useEffect(() => {
     var arr=0;
+    setEmp(employees.employees)
+    console.log(emp);
     setBioData(employees.employees[arr].biography);
     setName(employees.employees[arr].name);
     setRange(employees.employees[arr].popularity)
   }, []);
   const handleClick = (arr,img) => {
-    console.log("hii",employees.employees[arr].biography);
     setBioData(employees.employees[arr].biography);
     setName(employees.employees[arr].name);
     setprofilePic(img)
@@ -37,7 +39,11 @@ function App() {
         <div className='sb-pp'>
         <img src={godlogo} className='god-logo'/>
         </div>
-        <div className='sidebar-options'> 
+        <div className='sidebar-options'>
+        {emp.map((i)=>{
+          <h1>w</h1>
+        })}
+          
           <div onClick={()=>handleClick(0,Vito)} className='options'>Vito Corleone</div>
           <div onClick={()=>handleClick(1,Caro)} className='options'>Carmelia Corleone</div>
           <div onClick={()=>handleClick(2,riz)} className='options'>Carlo Rizzi</div>
@@ -45,7 +51,7 @@ function App() {
 
         </div>
       </div>
-      <header className='header' style={{backgroundImage: `url(${headerImage})`}}> 
+      <header className='header' style={{backgroundImage: `url(${headerImage}) `}}> 
       
       </header>
       <div className='body'>
